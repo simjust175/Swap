@@ -32,7 +32,6 @@ export default {
     }),
     methods: {
         emitGetRate() {
-            console.log("amount", Number(this.amount));
             this.loader = 'loading';
             this.$emit("get-initialized", this.amount)
         }

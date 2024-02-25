@@ -15,8 +15,7 @@ const changeData = reactive({
 })
 let totalAmount = ref("");
 let rate = ref("");
-//console.log("🔑🗝️🔑🗝️🔑🗝️", process.env.API_KEY);
-const API_KEY = "";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 const currencyChoice =(emittedCurrency) => {
   changeData[emittedCurrency.order] = emittedCurrency;
@@ -26,7 +25,6 @@ const getRate = async (amount) => {
   if (!amount) return "Error";
   const res = await fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${changeData.currency1.currency}/${changeData.currency2.currency}`);
   const {conversion_rate} = await res.json();
-  console.log(conversion_rate * amount);
   rate.value = conversion_rate;
   totalAmount.value = conversion_rate * amount
 }
