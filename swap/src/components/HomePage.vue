@@ -16,7 +16,7 @@ const changeData = reactive({
 let totalAmount = ref("");
 let rate = ref("");
 //console.log("🔑🗝️🔑🗝️🔑🗝️", process.env.API_KEY);
-const API_KEY = "5562c11f84e1689f7b353756";
+const API_KEY = "";
 
 const currencyChoice =(emittedCurrency) => {
   changeData[emittedCurrency.order] = emittedCurrency;
