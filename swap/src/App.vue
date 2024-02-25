@@ -25,6 +25,7 @@
 }
 
 #footer{
+  margin-top: 15px;
   padding: 0;
 }
 </style>

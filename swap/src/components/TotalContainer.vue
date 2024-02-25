@@ -12,7 +12,7 @@
 
         <v-card-actions>
             <v-btn color="teal-lighten-1" variant="text" @click="show = !show">
-                See full rate
+                Show {{ !show ? "rate" : "less" }}
             </v-btn>
 
             <v-spacer></v-spacer>
@@ -24,7 +24,7 @@
             <div v-show="show">
                 <v-divider></v-divider>
                 <v-card-text>
-                    {{ rate }}
+                    The rate is: {{ rate }}
                 </v-card-text>
             </div>
         </v-expand-transition>
@@ -39,6 +39,7 @@ export default {
     },
     data: () => ({
         show: false,
+        click: "rate"
     })
 }
 </script>

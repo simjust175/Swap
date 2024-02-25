@@ -28,6 +28,18 @@
         symbol: '£',
         currency: 'GBP',
       },
+      {
+        symbol: '₣',
+        currency: 'CHF'
+      },
+      {
+        symbol: 'AUD',
+        currency: 'AUD'
+      },
+      {
+        symbol: 'CAD',
+        currency: 'CAD'
+      }
        
       ],
     }),
